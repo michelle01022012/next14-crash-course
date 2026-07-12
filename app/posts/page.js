@@ -1,9 +1,9 @@
-import React from "react";
-
-function Page() {
+function Page({params}) {
   return (
-    <div>This is the posts page</div>
+    <div>
+      This is Post: {params.id}
+    </div>
   )
 }
 
-export default Page
+export default Page;
