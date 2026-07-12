@@ -1,9 +1,5 @@
-function Page({params}) {
-  return (
-    <div>
-      This is Post: {params.id}
-    </div>
-  )
+function Page() {
+  return <div>This is the posts page</div>
 }
 
-export default Page;
+export default Page
