@@ -1,5 +1,5 @@
 
-funcion Navbar() {
+function Navbar() {
     return (
         <nav>
             <ul>
