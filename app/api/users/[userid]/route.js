@@ -6,3 +6,11 @@ export async function GET() {
        
     })
 }
+
+export async function POST(request) {
+
+    return NextResponse.json({
+        fruits: ["apple", "grapes", "oranges"]
+    })
+
+}
