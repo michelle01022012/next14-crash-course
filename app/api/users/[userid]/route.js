@@ -1,16 +1,9 @@
-import {NextResponse} from "next/server"
-export async function GET() {
+import { NextResponse } from "next/server";
 
-    return NextResponse.json({
-        fruits: ["apple", "grapes", "oranges"],
-       
-    })
-}
+export function GET(request, context) {
+  const userid = context.params.userid;
 
-export async function POST(request) {
-
-    return NextResponse.json({
-        fruits: ["apple", "grapes", "oranges"]
-    })
-
+  return NextResponse.json({
+    userid,
+  });
 }
