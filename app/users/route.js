@@ -1,8 +1,13 @@
 import { NextResponse } from "next/server";
 
-export function GET(request, context) {
-    const userId = context.params.userId;
-    return NextResponse.json({
-        userid
-    })
+export async function GET() {
+  return NextResponse.json({
+    fruits: ["apple", "grapes", "oranges"],
+  });
+}
+
+export async function POST(request) {
+  const fruits = await request.json();
+
+  return NextResponse.json(fruits);
 }
