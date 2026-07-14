@@ -12,7 +12,7 @@ function CreatePost() {
             post: post
      }
 
-   )
+    }
 
    return (
         <div>
