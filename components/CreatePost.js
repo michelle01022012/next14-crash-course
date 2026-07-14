@@ -1,4 +1,8 @@
+"use client"
+import { useState } from "react";
+
 function CreatePost() {
+    const [post, setPost] = useState("")
     return (
         <div>
             <h1 className="font-bold text-xl">Create Post</h1>
