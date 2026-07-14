@@ -1,5 +1,6 @@
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "@/firebase";
+import { revalidatePath } from "next/cache";
 
 
 function CreatePost() {
@@ -11,6 +12,8 @@ function CreatePost() {
         await addDoc(collection(db, "posts"), {
             post: post
     });
+
+        revalidatePath("/posts")
 
     }
 
