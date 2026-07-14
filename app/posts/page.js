@@ -1,11 +1,14 @@
-import React from 'react'
-import Navbar from '@/components/Navbar'
-import CreatePost from '@/components/CreatePost'
-
+import React from "react";
+import Navbar from "@/components/Navbar";
+import CreatePost from "@/components/CreatePost";
 
 function Page() {
-  return <div>
-    This is the posts page</div>
+  return (
+    <div>
+      <CreatePost />
+    </div>
+  );
 }
 
-export default Page
+export default Page;
+

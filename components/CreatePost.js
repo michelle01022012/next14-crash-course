@@ -1,7 +1,7 @@
 function CreatePost() {
     return (
         <div>
-            <h1> className"font-bold text-xl"Create Post</h1>
+            <h1 className="font-bold text-xl">Create Post</h1>
               <form>
                 <textarea className="border border-black w-[400px] h-[80px] resize-none"/>
                 <br/>
