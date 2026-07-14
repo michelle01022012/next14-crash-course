@@ -1,26 +1,26 @@
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "@/firebase";
 import { revalidatePath } from "next/cache";
 
-
 function CreatePost() {
-    
     async function addPost(formData) {
         "use server"
 
-        const post = formData.get("text")
+        const post = formData.get("text");
+        if (!post) return;
+
         await addDoc(collection(db, "posts"), {
-            post: post
-    })
+            post: post,
+            createdAt: serverTimestamp() // Add this to sort correctly later
+        });
 
-        revalidatePath("/posts")
-
+        revalidatePath("/posts");
     }
 
-   return (
+    return (
         <div>
             <h1 className="font-bold text-xl">Create Post</h1>
-              <form action={addPost}>
+            <form action={addPost}>
                 <textarea name="text" className="border border-black w-[400px] h-[80px] resize-none" />
                 <br />
                 <button className="p-3 bg-blue-600 text-white w-full">Post</button>
