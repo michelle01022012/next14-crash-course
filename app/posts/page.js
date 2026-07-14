@@ -16,7 +16,7 @@ async function Page() {
     </div>
 
       <ul>
-         {posts.docs.map(p => <li>{p.data().post}</li>)}
+         {posts.docs.map(p => <li>{p.data().posts}</li>)}
       </ul>
      </div>
   );
