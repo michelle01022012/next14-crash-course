@@ -10,7 +10,7 @@ function CreatePost() {
         const post = formData.get("text")
         await addDoc(collection(db, "posts"), {
             post: post
-     }
+    });
 
     }
 
